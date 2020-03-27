@@ -74,4 +74,4 @@ async def sensei(ctx, term=None):
                             value="No alternative terms found.", inline=False)
         await ctx.send(embed=embed)
 
-bot.run('TOKEN')
+bot.run(os.environ['TOKEN'])
