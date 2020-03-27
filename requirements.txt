@@ -1,0 +1,5 @@
+discord.py==1.2.5
+websockets<7.0,>=6.0
+async-timeout
+requests
+beautifulsoup4
