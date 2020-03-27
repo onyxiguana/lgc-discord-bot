@@ -1,3 +1,4 @@
+import os
 import discord
 from discord.ext import commands
 from bs4 import BeautifulSoup
