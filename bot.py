@@ -5,7 +5,7 @@ from bs4 import BeautifulSoup
 import re
 import requests
 
-bot = commands.Bot(command_prefix='!')
+bot = commands.Bot(command_prefix='b!')
 
 @bot.command()
 async def ping(ctx):
