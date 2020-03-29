@@ -14,7 +14,12 @@ async def ping(ctx):
 
 @bot.command()
 async def badproverb(ctx):
-    messages = ["Hello!", "How are you doing?", "Howdy!"]
+    messages = [
+        "A wise person always leaves an even number of weak groups.",
+        "One eye is all you need to live.",
+        "Only a moron connects against a peep.", 
+        "When in a life-and-death situation, tenuki!"
+    ]
     await ctx.send(random.choice(messages))
 
 @bot.command(pass_context=True, aliases=["define"])
