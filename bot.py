@@ -6,7 +6,7 @@ import random
 import re
 import requests
 
-bot = commands.Bot(command_prefix='b!')
+bot = commands.Bot(command_prefix='!')
 
 @bot.command()
 async def ping(ctx):
