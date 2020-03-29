@@ -18,7 +18,8 @@ async def badproverb(ctx):
         "A wise person always leaves an even number of weak groups.",
         "One eye beats two eyes.",
         "One eye is all you need to live.",
-        "Only a moron connects against a peep.", 
+        "Only a moron connects against a peep.",
+        "Play where your opponent wants you to play.",
         "When in a life-and-death situation, tenuki!",
         "When in doubt, play the empty triangle."
     ]
