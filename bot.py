@@ -2,14 +2,25 @@ import os
 import discord
 from discord.ext import commands
 from bs4 import BeautifulSoup
+import random
 import re
 import requests
 
-bot = commands.Bot(command_prefix='!')
+bot = commands.Bot(command_prefix='b!')
 
 @bot.command()
 async def ping(ctx):
     await ctx.send('pong')
+
+@bot.command()
+async def badproverb(ctx):
+    messages = [
+        "A wise person always leaves an even number of weak groups.",
+        "One eye is all you need to live.",
+        "Only a moron connects against a peep.", 
+        "When in a life-and-death situation, tenuki!"
+    ]
+    await ctx.send(random.choice(messages))
 
 @bot.command(pass_context=True, aliases=["define"])
 async def sensei(ctx, term=None):
