@@ -16,9 +16,11 @@ async def ping(ctx):
 async def badproverb(ctx):
     messages = [
         "A wise person always leaves an even number of weak groups.",
+        "One eye beats two eyes.",
         "One eye is all you need to live.",
         "Only a moron connects against a peep.", 
-        "When in a life-and-death situation, tenuki!"
+        "When in a life-and-death situation, tenuki!",
+        "When in doubt, play the empty triangle."
     ]
     await ctx.send(random.choice(messages))
 
