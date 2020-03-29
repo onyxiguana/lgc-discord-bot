@@ -12,7 +12,7 @@ bot = commands.Bot(command_prefix='!')
 async def ping(ctx):
     await ctx.send('pong')
 
-@bot.command(aliases=["leandrosays"])
+@bot.command(aliases=["aisays","frankiesays","leandrosays"])
 async def badproverb(ctx):
     messages = [
         "A wise person always leaves an even number of weak groups.",
@@ -20,6 +20,7 @@ async def badproverb(ctx):
         "One eye is all you need to live.",
         "Only a moron connects against a peep.",
         "Play where your opponent wants you to play.",
+        "Proverbs are never wrong.",
         "When in a life-and-death situation, tenuki!",
         "When in doubt, play the empty triangle."
     ]
