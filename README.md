@@ -5,7 +5,8 @@ Current commands:
 
 ``
 !badproverb -- Gives you a random proverb to... er... 
-
+``
+``
 !sensei [term-no-spaces] -- Displays the first paragraph for a specified term from Sensei's Library
 ``
 
