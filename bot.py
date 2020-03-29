@@ -12,7 +12,7 @@ bot = commands.Bot(command_prefix='!')
 async def ping(ctx):
     await ctx.send('pong')
 
-@bot.command()
+@bot.command(aliases=["leandrosays"])
 async def badproverb(ctx):
     messages = [
         "A wise person always leaves an even number of weak groups.",
