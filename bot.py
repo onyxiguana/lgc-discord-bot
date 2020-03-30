@@ -16,6 +16,7 @@ async def ping(ctx):
 async def badproverb(ctx):
     messages = [
         "A wise person always leaves an even number of weak groups.",
+        "Memorising Joseki is all you need to become a strong Go player.",
         "One eye beats two eyes.",
         "One eye is all you need to live.",
         "Only a moron connects against a peep.",
