@@ -27,6 +27,21 @@ async def badproverb(ctx):
     ]
     await ctx.send(random.choice(messages))
 
+@bot.command()
+async def welcomelinks(ctx):
+    message = "Lancaster Go Club [[Facebook](https://www.facebook.com/groups/lancastergoclub)] [[play on OGS](https://online-go.com/group/2607)]\nBritish Go Association [[Homepage](http://britgo.org/)]\nEuropean Go Federation [[Homepage](https://eurogofed.org/)] [[EGD rankings database](http://www.europeangodatabase.eu/EGD/)]\nInternational Go Federation [[Homepage](https://www.intergofed.org/)]"
+    embed = discord.Embed(title="Our club and surroundings",
+                          description=message, color=7506394)
+    await ctx.send(embed=embed)
+    
+@bot.command()
+async def beginnerlinks(ctx):
+    message = "To search in Sensei's Library, please add a term as: !sensei term\n\nNOTE: Leave out spaces!"
+    embed = discord.Embed(title="Please add a search term",
+                          description=message, color=0xeee657)
+    embed.set_thumbnail(url="https://senseis.xmp.net/images/stone-hello.png")
+    await ctx.send(embed=embed)
+    
 @bot.command(pass_context=True, aliases=["define"])
 async def sensei(ctx, term=None):
     """Get information from Sensei's Library."""
