@@ -27,6 +27,20 @@ async def badproverb(ctx):
     ]
     await ctx.send(random.choice(messages))
 
+@bot.command()
+async def welcomelinks(ctx):
+    message = "Lancaster Go Club [[Facebook](https://www.facebook.com/groups/lancastergoclub)] [[play on OGS](https://online-go.com/group/2607)]\nBritish Go Association [[Homepage](http://britgo.org/)]\nEuropean Go Federation [[Homepage](https://eurogofed.org/)] [[EGD rankings database](http://www.europeangodatabase.eu/EGD/)]\nInternational Go Federation [[Homepage](https://www.intergofed.org/)]"
+    embed = discord.Embed(title="Our club and surroundings",
+                          description=message, color=7506394)
+    await ctx.send(embed=embed)
+    
+@bot.command()
+async def beginnerlinks(ctx):
+    message = "**Learn the rules!** \n[The Interactive Way to Go ](http://playgo.to/iwtg/en/) (requires flash)\nA classic, often recommended, tutorial for learning the rules and much more. Alternatives that don't require Flash include [the OGS tutorial](https://online-go.com/learn-to-play-go), [learn-go.net](https://www.learn-go.net/) and [learn-go.now.sh](https://learn-go.now.sh/), but these cover less.\n\n**Once you know the rules...**\n[Online Go Server](https://online-go.com/) – Play, play, play! :smiley:\n[Gochild](http://gochild2009.appspot.com/) (refresh page to get it to work) – A big collection of Go problems starting from the basics. No instructions, but if you've seen the \"make two eyes\" concept, the problems will start to make sense.\n[Sensei's library](https://senseis.xmp.net/)  – The Go bible online. The [beginner pages](https://senseis.xmp.net/?PagesForBeginners) are a great place to start.\n\n**Or just watch...**\n[Hikaru no Go](https://en.wikipedia.org/wiki/Hikaru_no_Go) [[YouTube English dub](https://www.youtube.com/watch?v=ey657PxfXlM&list=PLaXkLkOnTTwGcmSowFho0Kb6Gw3UdP6Ta)] [[YouTube English sub](https://www.youtube.com/watch?v=k6e03IDZ9a0&list=PLjKsVS5ikMdDhVap-UAR_9kZMAB-TJREd)]\nAnother classic, a manga series responsible for a boom of young Go players in Japan and around the world. Aside from being a sweet coming-of-age story, this series will teach you the basics and culture of Go, and many of the games in it are real, professional games."
+    embed = discord.Embed(title="Five websites for beginners",
+                          description=message, color=7506394)
+    await ctx.send(embed=embed)
+    
 @bot.command(pass_context=True, aliases=["define"])
 async def sensei(ctx, term=None):
     """Get information from Sensei's Library."""
