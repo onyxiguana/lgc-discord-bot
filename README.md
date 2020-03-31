@@ -1,5 +1,6 @@
-# lgc-discord-bot
-A bot for the Lancaster Go Club [Discord channel](https://discord.gg/6FqNWpZ).
+# Discord bot for the Lancaster Co Club
+
+Go to the Lancaster Go Club Discord channel [here](https://discord.gg/6FqNWpZ).
 
 Current commands:
 
