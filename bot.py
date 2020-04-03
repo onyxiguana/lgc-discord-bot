@@ -6,7 +6,7 @@ import random
 import re
 import requests
 
-bot = commands.Bot(command_prefix='b!')
+bot = commands.Bot(command_prefix='!')
 
 @bot.command()
 async def ping(ctx):
@@ -14,18 +14,29 @@ async def ping(ctx):
 
 @bot.command(aliases=["aisays","frankiesays","leandrosays"])
 async def badproverb(ctx):
-    messages = [
-        "A wise person always leaves an even number of weak groups.",
-        "Memorising Joseki is all you need to become a strong Go player.",
-        "One eye beats two eyes.",
-        "One eye is all you need to live.",
-        "Only a moron connects against a peep.",
-        "Play where your opponent wants you to play.",
-        "Proverbs are never wrong.",
-        "When in a life-and-death situation, tenuki!",
-        "When in doubt, play the empty triangle."
-    ]
-    await ctx.send(random.choice(messages))
+    with open('messages.txt', 'r') as messagefile:
+        proverbs = [proverb.rstrip('\n') for proverb in messagefile]
+        await ctx.send(random.choice(proverbs))
+
+@bot.command(aliases=["aisaid","frankiesaid","leandrosaid"])
+async def newbadproverb(ctx, *newproverb):
+    newproverb = ' '.join(newproverb)
+    if newproverb is '':
+        message = """Either type your new proverb after the command, e.g. "!aisaid Whoever has four corners should resign",
+        or use !badproverb to hear one of our proverbs."""
+        embed = discord.Embed(title="Remember to type your proverb!",
+                              description=message, color=0xeee657)
+        embed.set_thumbnail(url=random.choice([
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/USAF_B-2_Spirit.jpg/200px-USAF_B-2_Spirit.jpg",
+        "http://art6.photozou.jp/pub/630/47630/photo/16803620_624.v1585627234.jpg",
+        ]))
+        await ctx.send(embed=embed)
+    else:
+        re.sub(r'[^a-zA-Z0-9,. ]','',newproverb)
+        with open('messages.txt', 'a') as messagefile:
+            messagefile.write(newproverb+'\n')
+        await ctx.send('Added the new proverb "'+newproverb+'". Thanks!')
+
 
 @bot.command()
 async def welcomelinks(ctx):
